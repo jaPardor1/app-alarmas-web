@@ -1,0 +1,93 @@
+<div style="width: 100%; height: 100%; position: relative; background: #FCF4E7">
+  <div style="width: 1512px; height: 982px; left: 0px; top: 0px; position: absolute; background: #FEFBF6"></div>
+  <div style="width: 360px; height: 982px; padding: 12px; left: 0px; top: 0px; position: absolute; background: #FCF4E7; border-radius: 16px; overflow: hidden; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+      <div style="width: 40px; height: 55px; background:transparent">
+        <img style="width: 40px; height: 55px;" src="assets/icons/Gallo.svg">
+      </div>
+      <div style="align-self: stretch; padding-left: 16px; padding-right: 16px; padding-top: 18px; padding-bottom: 18px; border-radius: 100px; overflow: hidden; justify-content: flex-start; align-items: center; gap: 10px; display: inline-flex">
+          <div style="justify-content: flex-start; align-items: center; gap: 12px; display: flex">
+              <div></div>
+          </div>
+      </div>
+      <div routerLink="/menuAlarmas" style="cursor: pointer;align-self: stretch; height: 56px; background: #F9EDD9; border-radius: 100px; overflow: hidden; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="flex: 1 1 0; align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 24px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
+              <div style="width: 24px; height: 24px; position: relative">
+                  <div style="border-radius: 8px;width: 12px; height: 12px; left: 6px; top: 6px; position: absolute; background: #291515"></div>
+              </div>
+              <div style="flex: 1 1 0; color: #291515; font-size: 14px; font-family: Roboto; font-weight: 600; line-height: 20px; letter-spacing: 0.10px; word-wrap: break-word">Mis Alarmas</div>
+              <div style="text-align: right"></div>
+          </div>
+      </div>
+      <div routerLink="/settings" style="cursor: pointer;align-self: stretch; height: 56px; border-radius: 100px; overflow: hidden; justify-content: flex-start; align-items: center; gap: 12px; display: inline-flex">
+          <div style="flex: 1 1 0; align-self: stretch; padding-top: 16px; padding-bottom: 16px; padding-left: 16px; padding-right: 24px; justify-content: flex-start; align-items: center; gap: 12px; display: flex">
+              <div style="width: 24px; height: 24px; position: relative">
+                  <div style="border-radius: 8px;width: 12px; height: 12px; left: 6px; top: 6px; position: absolute; background: #49454F"></div>
+              </div>
+              <div style="flex: 1 1 0; color: #49454F; font-size: 14px; font-family: Roboto; font-weight: 500; line-height: 20px; letter-spacing: 0.10px; word-wrap: break-word">Ajustes</div>
+          </div>
+      </div>
+  </div>
+  <div style="width: 268px; height: 39px; left: 413px; top: 37px; position: absolute; color: #1D1B20; font-size: 32px; font-family: Roboto; font-weight: 600; line-height: 28px; word-wrap: break-word">Añadir alarma</div>
+  <div style="width: 582px; height: 297px; left: 394px; top: 131px; position: absolute">
+      <div style="width: 567px; height: 56px; left: 15px; top: 0px; position: absolute; border-top-left-radius: 4px; border-top-right-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+          <div style="align-self: stretch; height: 56px; border-radius: 4px; border: 1px transparent solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+              <div style="align-self: stretch; padding-top: 4px; padding-bottom: 4px; padding-left: 16px; border-top-left-radius: 4px; border-top-right-radius: 4px; justify-content: flex-start; align-items: center; display: inline-flex">
+                  <div style="flex: 1 1 0; height: 40px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                      <mat-form-field style="width:500px;">
+                        <mat-label>Hora</mat-label>
+                        <input style="width:310px;" type="text" matInput>
+                        <input class="timepickerCustom" aria-label="12hr format" [ngxTimepicker]="default" readonly>
+                        <ngx-material-timepicker #default ></ngx-material-timepicker>
+                      </mat-form-field>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="width: 567px; height: 56px; left: 15px; top: 83px; position: absolute; border-top-left-radius: 4px; border-top-right-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+          <div style="align-self: stretch; height: 56px; border-radius: 4px; border: 1px transparent solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+              <div style="align-self: stretch; padding-top: 4px; padding-bottom: 4px; padding-left: 16px; border-top-left-radius: 4px; border-top-right-radius: 4px; justify-content: flex-start; align-items: center; display: inline-flex">
+                  <div style="flex: 1 1 0; height: 40px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                      <mat-form-field style="width: 500px;">
+                        <mat-label>Fecha</mat-label>
+                        <input matInput [matDatepicker]="picker">
+                        <mat-hint>MM/DD/YYYY</mat-hint>
+                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                        <mat-datepicker #picker></mat-datepicker>
+                      </mat-form-field>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="width: 567px; height: 56px; left: 15px; top: 166px; position: absolute; border-top-left-radius: 4px; border-top-right-radius: 4px; flex-direction: column; justify-content: flex-start; align-items: flex-start; display: inline-flex">
+          <div style="align-self: stretch; height: 56px; border-radius: 4px; border: 1px transparent solid; flex-direction: column; justify-content: flex-start; align-items: flex-start; gap: 10px; display: flex">
+              <div style="align-self: stretch; padding-top: 8px; padding-bottom: 8px; padding-left: 16px; border-top-left-radius: 4px; border-top-right-radius: 4px; justify-content: flex-start; align-items: center; display: inline-flex">
+                  <div style="flex: 1 1 0; height: 40px; flex-direction: column; justify-content: center; align-items: flex-start; display: inline-flex">
+                      <mat-form-field style="width: 500px;">
+                        <mat-label>Descripcion</mat-label>
+                        <textarea matInput>
+                        </textarea>
+                      </mat-form-field>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div style="width: 114px; height: 48px; left: 0px; top: 249px; position: absolute">
+          <mat-checkbox class="example-margin">Repetible</mat-checkbox>
+        </div>
+  </div>
+  <div style="width: 373px; height: 40px; left: 413px; top: 451px; position: absolute">
+      <div style="width: 180px; height: 40px; left: 193px; top: 0px; position: absolute; background: #F2542D; border-radius: 100px; overflow: hidden; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="align-self: stretch; flex: 1 1 0; padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+              <div style="text-align: center; color: white; font-size: 14px; font-family: Roboto; font-weight: 500; line-height: 20px; letter-spacing: 0.10px; word-wrap: break-word">Guardar</div>
+          </div>
+      </div>
+      <div routerLink="/menuAlarmas" style="cursor:pointer;width: 180px; height: 40px; left: 0px; top: 0px; position: absolute; border-radius: 100px; overflow: hidden; border: 1px #79747E solid; flex-direction: column; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+          <div style="align-self: stretch; flex: 1 1 0; padding-left: 24px; padding-right: 24px; padding-top: 10px; padding-bottom: 10px; justify-content: center; align-items: center; gap: 8px; display: inline-flex">
+              <div style="text-align: center; color: #F2542D; font-size: 14px; font-family: Roboto; font-weight: 500; line-height: 20px; letter-spacing: 0.10px; word-wrap: break-word">Cancelar</div>
+          </div>
+      </div>
+  </div>
+  <div style="width: 444px; height: 384.68px; left: 1068px; top: 597px; position: absolute">
+      <img src="assets/icons/chicken_background.jfif" style="width: 444px; height: 384.68px;" alt="">
+  </div>
+</div>
